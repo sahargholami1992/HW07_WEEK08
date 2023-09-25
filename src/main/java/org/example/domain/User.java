@@ -1,6 +1,8 @@
 package org.example.domain;
 
-public class User {
+import org.example.base.domain.BaseEntity;
+
+public class User extends BaseEntity {
     private String user_name;
     private String email;
     private String password;

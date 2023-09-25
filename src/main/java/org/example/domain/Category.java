@@ -1,6 +1,8 @@
 package org.example.domain;
 
-public class Category {
+import org.example.base.domain.BaseEntity;
+
+public class Category extends BaseEntity {
     private String description;
 
 }
