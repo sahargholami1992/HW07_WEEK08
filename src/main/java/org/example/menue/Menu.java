@@ -1,5 +1,6 @@
 package org.example.menue;
 
+import org.example.base.domain.BaseEntity;
 import org.example.domain.*;
 
 import org.example.service.*;
@@ -22,6 +23,7 @@ public class Menu {
 
     public Menu() {
     }
+
     public void publicMenu() throws SQLException {
         System.out.println("***Welcome***");
         System.out.println("1- Sign in");
@@ -143,14 +145,14 @@ public class Menu {
     }
     public int selectCategory() throws SQLException {
         System.out.println("select a category number: ");
-        Category[]categories =categoryService.getCategory();
-        for (Category category:categories){
+        BaseEntity[]categories = categoryService.findAll();
+        for (BaseEntity category:categories){
             System.out.println(category.getId()+" >> "+category.getName());
         }
         int number = input.nextInt();
         input.nextLine();
         boolean validCategoryNumber=false;
-        for(Category category:categories){
+        for(BaseEntity category:categories){
             if(category.getId()==number) {
                 validCategoryNumber=true;
                 break;
@@ -165,15 +167,15 @@ public class Menu {
     }
     public int selectBrand() throws SQLException {
         System.out.println("select a brand number: ");
-        Brand[]brands =brandService.getBrands();
-        for (Brand brand:brands){
+        BaseEntity[]brands =brandService.findAll();
+        for (BaseEntity brand:brands){
             System.out.println(brand.getId()+" >> "+brand.getName());
         }
         int number = input.nextInt();
         input.nextLine();
         //check if its valid
         boolean validBrandNumber=false;
-        for(Brand brand:brands){
+        for(BaseEntity brand:brands){
             if(brand.getId()==number) {
                 validBrandNumber=true;
                 break;

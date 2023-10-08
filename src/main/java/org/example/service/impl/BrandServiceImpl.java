@@ -15,8 +15,8 @@ public class BrandServiceImpl extends BaseEntityServiceImpl
     }
 
 
-    @Override
-    public Brand[] getBrands() throws SQLException {
-        return (Brand[]) super.findAll();
-    }
+//    @Override
+//    public Brand[] getBrands() throws SQLException {
+//        return (Brand[]) super.findAll();
+//    }
 }

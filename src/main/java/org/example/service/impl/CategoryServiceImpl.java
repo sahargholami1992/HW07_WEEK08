@@ -14,8 +14,8 @@ public class CategoryServiceImpl extends BaseEntityServiceImpl
         super(baseRepository);
     }
 
-    @Override
-    public Category[] getCategory() throws SQLException {
-        return (Category[]) super.findAll();
-    }
+//    @Override
+//    public Category[] getCategory() throws SQLException {
+//        return (Category[]) findAll();
+//    }
 }

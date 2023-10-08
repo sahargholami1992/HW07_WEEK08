@@ -6,5 +6,5 @@ import org.example.domain.Brand;
 import java.sql.SQLException;
 
 public interface BrandService extends BaseEntityService {
-    Brand[] getBrands() throws SQLException;
+    //Brand[] getBrands() throws SQLException;
 }

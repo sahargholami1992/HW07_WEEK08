@@ -6,5 +6,5 @@ import org.example.domain.Category;
 import java.sql.SQLException;
 
 public interface CategoryService extends BaseEntityService {
-    Category[] getCategory() throws SQLException;
+    //Category[] getCategory() throws SQLException;
 }

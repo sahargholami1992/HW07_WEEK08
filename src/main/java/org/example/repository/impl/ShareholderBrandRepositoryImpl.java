@@ -19,7 +19,7 @@ public class ShareholderBrandRepositoryImpl implements ShareholderBrandRepositor
                 "insert into shareholder_brand(shareholder_id,brand_id ) values (?,?)"
         );
         preparedStatement.setLong(1,shareholder_id);
-        preparedStatement.setLong(1,brand_id);
+        preparedStatement.setLong(2,brand_id);
         preparedStatement.executeUpdate();
     }
 
@@ -29,7 +29,7 @@ public class ShareholderBrandRepositoryImpl implements ShareholderBrandRepositor
                 "Delete from shareholder_brand where shareholder_id=? AND brand_id=? "
         );
         preparedStatement.setLong(1,shareholder_id);
-        preparedStatement.setLong(1,brand_id);
+        preparedStatement.setLong(2,brand_id);
         preparedStatement.executeUpdate();
     }
 }
